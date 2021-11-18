@@ -16,18 +16,16 @@ const sum = (a,b) => {
     return a + b
 }
 
-// just a console log for ourselves.
-console.log(sum(7,3))
-
 const fromDollarToYen = function(valueinDollar){
     let yen = oneEuroIs.JPY*valueinDollar/oneEuroIs.USD
     return yen
 }
 const fromYenToPound = function(valueinYen){
-    let pound = oneEuroIs.GBP*valueinYen/oneEuroIs.JPY
-    return pound
+    let pounds = oneEuroIs.GBP*valueinYen/oneEuroIs.JPY
+    return pounds
 }
 // we include fromEuroToDollar here as well because it needs to be exported
 module.exports = { sum, fromEuroToDollar, fromDollarToYen, fromYenToPound }
-console.log(fromDollarToYen(100))
-console.log(fromYenToPound(127.9))
+console.log(fromDollarToYen(102))
+console.log(fromYenToPound(150))
+console.log(fromEuroToDollar(3.5))
